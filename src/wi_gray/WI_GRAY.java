@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Konserwator
+ * @author Łukasz Oksejuk
  */
 public class WI_GRAY {
 
@@ -20,8 +20,9 @@ public class WI_GRAY {
    public static void main(String[] args) 
         {
         Scanner wej = new Scanner(System.in);
-        int n = wej.nextInt();
+        //int n = wej.nextInt();
         int w = wej.nextInt();
+        int n=minsize(w);
         int tmp = w;
         int tmp2;
         
@@ -65,5 +66,15 @@ public class WI_GRAY {
         else
             return 1;
         }
+    public static int minsize(int w)//funkcja okreslajaca minimalna dlugosc ciagu bitow potrzebna do zapisania takiej wartosci
+    {
+      int x=0;
+      while(((int) Math.pow(2,x))<w)
+        {
+        x++;
+        }
+        
+      return x;  
+    }
     
     }
