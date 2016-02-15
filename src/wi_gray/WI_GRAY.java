@@ -23,8 +23,6 @@ public class WI_GRAY {
     
    public static void main(String[] args) 
         {
-        int n;
-        String graycode;
         
         //kod gui
         JFrame oknogl = new JFrame();
@@ -49,11 +47,9 @@ public class WI_GRAY {
         JButton konwertuj = new JButton("Konwertuj");
         
         konwertuj.addActionListener((ActionEvent e)->{
+        String graycode = conv(Integer.parseInt(fliczba.getText()));
         
-        int n2 = Integer.parseInt(fliczba.getText());
-        String graycode2 = conv(n2);
-        
-       JOptionPane.showMessageDialog(oknogl, "Kod graya dla podanej liczby to:\n"+graycode2);
+       JOptionPane.showMessageDialog(oknogl, "Kod graya dla podanej liczby to:\n"+graycode);
         
         });
         p1_oknogl.add(konwertuj);
